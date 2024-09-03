@@ -1,6 +1,6 @@
 package converter;
 
-import checkers.ValidatorService;
+import validators.CalculatorValidatorService;
 import constants.CalculatorConstants;
 
 import java.util.Map;
@@ -13,12 +13,12 @@ public class Converter {
 
         if (roman.length() >= 2 && roman.startsWith("I")
                 && roman.chars().filter(ch -> ch == 'I').count() == 1) {
-            ValidatorService.checkRomanAvailability(roman);
+            CalculatorValidatorService.checkRomanAvailability(roman);
             result = CalculatorConstants.ROMANS.get(roman);
         } else {
             int i = 0;
             while (i < roman.length()) {
-                ValidatorService.checkRomanAvailability(String.valueOf(roman.charAt(i)));
+                CalculatorValidatorService.checkRomanAvailability(String.valueOf(roman.charAt(i)));
                 result += CalculatorConstants.ROMANS.get(String.valueOf(roman.charAt(i)));
                 i++;
             }
@@ -27,7 +27,7 @@ public class Converter {
     }
 
     public static String arabicToRoman(Integer number) {
-        ValidatorService.checkIfPositive(number);
+        CalculatorValidatorService.checkIfPositive(number);
         StringBuilder sb = new StringBuilder();
 
         for (Map.Entry<String, Integer> entry : CalculatorConstants.ROMANS.entrySet()) {

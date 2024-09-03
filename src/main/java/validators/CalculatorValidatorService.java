@@ -1,8 +1,8 @@
-package checkers;
+package validators;
 
 import constants.CalculatorConstants;
 
-public class ValidatorService {
+public class CalculatorValidatorService {
 
     public static void arabicValidator(int firstNumber, int secondNumber) {
         checkNumberAvailability(firstNumber, secondNumber);

@@ -1,7 +1,7 @@
 package calculator.impl;
 
 import calculator.Calculator;
-import checkers.ValidatorService;
+import validators.CalculatorValidatorService;
 import converter.Converter;
 
 import static calculator.CalculatorService.getResult;
@@ -13,7 +13,7 @@ public class RomanCalculator implements Calculator {
         int firstArabic = Converter.romanToArabic(firstNumber);
         int secondArabic = Converter.romanToArabic(secondNumber);
 
-        ValidatorService.romanValidator(firstArabic, secondArabic);
+        CalculatorValidatorService.romanValidator(firstArabic, secondArabic);
 
         int result = getResult(operator, firstArabic, secondArabic);
 

@@ -1,7 +1,7 @@
 package calculator.impl;
 
 import calculator.Calculator;
-import checkers.ValidatorService;
+import validators.CalculatorValidatorService;
 
 import static calculator.CalculatorService.getResult;
 
@@ -12,7 +12,7 @@ public class ArabicCalculator implements Calculator {
             int firstArabic = Integer.parseInt(firstNumber);
             int secondArabic = Integer.parseInt(secondNumber);
 
-            ValidatorService.arabicValidator(firstArabic, secondArabic);
+            CalculatorValidatorService.arabicValidator(firstArabic, secondArabic);
 
             return String.valueOf(getResult(operator, firstArabic, secondArabic));
         } catch (NumberFormatException e) {

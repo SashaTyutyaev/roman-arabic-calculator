@@ -3,7 +3,7 @@ package calculator;
 import calculator.factory.ArabicCalculatorFactory;
 import calculator.factory.CalculatorFactory;
 import calculator.factory.RomanCalculatorFactory;
-import checkers.ValidatorService;
+import validators.CalculatorValidatorService;
 
 public class CalculatorService {
 
@@ -14,7 +14,7 @@ public class CalculatorService {
         String operator = elem[1];
         String secondNumber = elem[2];
 
-        ValidatorService.inputValidator(elem);
+        CalculatorValidatorService.inputValidator(elem);
 
         CalculatorFactory calculatorFactory;
 

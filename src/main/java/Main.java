@@ -1,10 +1,10 @@
-import calculator.Calculator;
+import calculator.CalculatorService;
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        CalculatorService calculatorService = new CalculatorService();
         Scanner commandScanner = new Scanner(System.in);
         Scanner inputScanner = new Scanner(System.in);
         Boolean isArabic = false;
@@ -16,12 +16,12 @@ public class Main {
                 case 1:
                     System.out.println("Введите операцию, используя арабские цифры");
                     String input = inputScanner.nextLine();
-                    System.out.println(calculator.calculate(input, !isArabic));
+                    System.out.println(calculatorService.calculate(input, !isArabic));
                     break;
                 case 2:
                     System.out.println("Введите операцию, используя римские цифры");
                     String input2 = inputScanner.nextLine();
-                    System.out.println(calculator.calculate(input2, isArabic));
+                    System.out.println(calculatorService.calculate(input2, isArabic));
             }
         }
     }

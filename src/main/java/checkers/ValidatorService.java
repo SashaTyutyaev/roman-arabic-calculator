@@ -1,6 +1,6 @@
 package checkers;
 
-import repository.CalculatorConstants;
+import constants.CalculatorConstants;
 
 public class ValidatorService {
 

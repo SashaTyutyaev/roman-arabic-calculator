@@ -1,7 +1,7 @@
 package converter;
 
 import checkers.ValidatorService;
-import repository.CalculatorConstants;
+import constants.CalculatorConstants;
 
 import java.util.Map;
 

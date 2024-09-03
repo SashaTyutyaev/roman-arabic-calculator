@@ -1,4 +1,4 @@
-package repository;
+package constants;
 
 import java.util.LinkedHashMap;
 import java.util.List;

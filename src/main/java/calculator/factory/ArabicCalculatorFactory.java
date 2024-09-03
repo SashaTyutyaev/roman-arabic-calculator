@@ -1,7 +1,7 @@
 package calculator.factory;
 
-import calculator.impl.ArabicCalculator;
 import calculator.Calculator;
+import calculator.impl.ArabicCalculator;
 
 public class ArabicCalculatorFactory implements CalculatorFactory {
 
